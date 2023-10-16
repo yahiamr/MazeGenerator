@@ -1,0 +1,9 @@
+# Node dependencies
+/node_modules
+
+# Operating System generated files
+.DS_Store
+
+# IDE and Editor generated files
+.vscode/
+*.log
