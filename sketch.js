@@ -6,7 +6,7 @@ var last;
 var stack = [];
 
 function setup() {
-    createCanvas(600, 600);
+    createCanvas(700, 700);
     cols = floor(width / w);
     rows = floor(height / w);
     for (let j = 0; j < rows; j++) {
