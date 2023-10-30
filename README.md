@@ -70,3 +70,34 @@ Contributions are welcome!
 ## Technologies Used
 
 - [p5.js](https://p5js.org/) - A JS client-side library for creating graphic and interactive experiences.
+
+## TODO solve using GAs
+1. Representation
+Each genome in the GA will represent a path through the maze. The genome could be a string of directions, e.g., UDLR for up, down, left, and right respectively.
+
+2. Fitness Function
+The fitness of each path will be based on how close it gets to the exit (or how far it travels without hitting a wall). The more distance it covers, the higher its fitness.
+
+3. Selection
+Select two parent paths based on their fitness. Paths that cover more distance in the maze without hitting a wall are more likely to be selected.
+
+4. Crossover
+Given two parent paths, produce a child path. One way to crossover is to pick a random point in the path and swap the segments after that point between the two parents.
+
+5. Mutation
+Occasionally, make a random change to a path. This could involve changing a direction or adding/removing a step.
+
+6. Repeat
+Generate new populations of paths using selection, crossover, and mutation. Over time, paths that get closer to solving the maze should emerge.
+
+Implementation:
+1- Initialize a population of random paths.
+2- Calculate the fitness of each path in the population.
+   - Move through the maze according to the directions in the path.
+   - If you hit a wall, stop.
+   - Calculate fitness based on distance traveled. If a path reaches the end of the maze, give it a large fitness bonus.
+3- Select two parent paths. Paths that traveled further in the maze are more likely to be selected.
+4- Crossover the parents to produce a child path.
+5- Occasionally mutate the child path.
+6- Repeat with the new population.
+7- Stop when a path has found the exit or after a certain number of generations.
