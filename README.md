@@ -103,40 +103,50 @@ Implementation:
 7- Stop when a path has found the exit or after a certain number of generations.
 
 
+
 ## TODO: Implement Solver Using BFS Algorithm
 
-Overview
+### Overview
 
 The next phase in our project is to implement a maze solver using the Breadth-First Search (BFS) algorithm. BFS is an ideal choice for this task as it finds the shortest path in an unweighted graph, which, in our case, is the maze represented by a grid of cells.
 
-Objective
+### Objective
 
 The solver should find the shortest path from the starting cell (top-left corner of the maze) to the target cell (bottom-right corner). It will navigate through the maze grid, respecting the walls and boundaries defined during the maze generation phase.
 
-Implementation Details
+### Implementation Details
 
-	1.	BFS Algorithm: Unlike Depth-First Search (DFS), BFS explores the maze level by level, starting from the start node and moving towards the end node, ensuring the shortest path is found.
-	2.	Data Structures:
-	•	A queue to keep track of cells to be explored next.
-	•	A visited array or property to mark cells that have already been explored to avoid revisiting them.
-	3.	Solver Function: The core function to implement the BFS algorithm. It will:
-	•	Initialize the queue with the starting cell.
-	•	Explore each cell’s neighbors, adding them to the queue if they haven’t been visited and are accessible (no wall in between).
-	•	Continue the process until the queue is empty or the target cell is reached.
-	4.	Path Reconstruction: After reaching the target cell, reconstruct the path taken from the start to the end. This might require additional properties in the cell object to keep track of the path.
-	5.	Visual Representation: Visually represent the path found by the solver in the maze, possibly with a distinct color or pattern.
-	6.	Integration: Ensure that the solver is triggered after the maze generation phase is complete, and that it interacts correctly with the existing maze structure.
+1. **BFS Algorithm**: Unlike Depth-First Search (DFS), BFS explores the maze level by level, starting from the start node and moving towards the end node, ensuring the shortest path is found.
 
-Function Signature
+2. **Data Structures**:
+   - A `queue` to keep track of cells to be explored next.
+   - A `visited` array or property to mark cells that have already been explored to avoid revisiting them.
+
+3. **Solver Function**: The core function to implement the BFS algorithm. It will:
+   - Initialize the queue with the starting cell.
+   - Explore each cell's neighbors, adding them to the queue if they haven't been visited and are accessible (no wall in between).
+   - Continue the process until the queue is empty or the target cell is reached.
+
+4. **Path Reconstruction**: After reaching the target cell, reconstruct the path taken from the start to the end. This might require additional properties in the cell object to keep track of the path.
+
+5. **Visual Representation**: Visually represent the path found by the solver in the maze, possibly with a distinct color or pattern.
+
+6. **Integration**: Ensure that the solver is triggered after the maze generation phase is complete, and that it interacts correctly with the existing maze structure.
+
+### Function Signature
 
 The BFS solver function might have the following signature:
 
+```javascript
 function solveMazeBFS(startCell, targetCell) {
     // Implementation here
 }
+```
 
-Testing
+### Testing
 
 Thoroughly test the solver to ensure it correctly finds the shortest path in various maze configurations. Handle edge cases like no available path or extremely complex mazes.
 
-Note: This section is a guideline and should be adapted based on the specific requirements and architecture of your project.
+---
+
+*Note: This section is a guideline and should be adapted based on the specific requirements and architecture of your project.*
