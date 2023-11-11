@@ -101,7 +101,9 @@ Implementation:
 5- Occasionally mutate the child path.
 6- Repeat with the new population.
 7- Stop when a path has found the exit or after a certain number of generations.
-TODO: Implement Solver Using BFS Algorithm
+
+
+## TODO: Implement Solver Using BFS Algorithm
 
 Overview
 
