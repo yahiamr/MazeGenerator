@@ -9,6 +9,7 @@ This project provides an interactive way to visualize the backtracking maze gene
 ## Features
 
 
+
 1. **Cell Object (`cell.js`)**: Each cell in the grid is represented by this object. It has attributes like position (i, j), walls (top, right, bottom, left), and whether it's visited or not. It also contains methods to display the cell and to check for neighbors that haven't been visited.
 
 2. **Maze Grid (`sketch.js`)**: This file sets up the maze grid, defines the maze generation algorithm, and displays the maze. The grid is an array of cell objects, and the maze generation uses a stack to backtrack when it reaches a cell with no unvisited neighbors.
